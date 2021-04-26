@@ -1,0 +1,111 @@
+<style>
+    body{
+        background-color: #638CB8;
+        text-align: center;
+    }
+    form{
+        width: auto;
+        display: inline-block;
+        background-color: white;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    input{
+        display: inline-block;
+        width: auto;
+        height:auto;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    h3{
+        color: white;
+        width: 100%;
+        display: inline-block;
+        background-color: blue;
+        text-align: center;
+        margin: auto;
+    }
+
+    .notekeeping-body{
+        border-radius: 5px;
+        display: inline-block;
+        width: 600px;
+        min-height: 400px;
+        max-height: auto;
+        background-color: #fff;
+        margin: auto;
+    }
+    .li-style{
+        display: inline-block;
+        width: 80%;
+        height:auto;
+        background-color: cyan;
+        color: black;
+        border-radius: 5px;
+        text-align: left;
+        text-decoration: none;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .each-note-style{
+        display: inline-block;
+        width: 90%;
+        height:auto;
+        background-color: rgb(4, 73, 73);
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .btn-delete{
+        display: inline-block;
+        width: auto;
+        height:auto;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .btn-edit{
+        display: inline-block;
+        width: auto;
+        height:auto;
+        background-color: rgb(7, 107, 21);
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    p{
+        height: auto;
+        width: auto;
+        padding: 4px;
+        margin: auto;    
+    }
+</style>
+<div class="notekeeping-body">
+    <h3>
+        Edit Note Here
+    </h3>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.title}}<br>
+        <input class="btn-edit" type="submit" value="Save"/>
+    </form>
+</div>
